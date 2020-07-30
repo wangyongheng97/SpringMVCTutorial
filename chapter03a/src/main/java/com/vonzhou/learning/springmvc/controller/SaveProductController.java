@@ -10,14 +10,14 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.Controller;
 
-
+//此处的映射在配置文件里 修改自idea
 public class SaveProductController implements Controller {
 
     private static final Log logger = LogFactory
             .getLog(SaveProductController.class);
 
     public ModelAndView handleRequest(HttpServletRequest request,
-                                      HttpServletResponse response) throws Exception {
+                                      HttpServletResponse response) {
         logger.info("SaveProductController called");
         ProductForm productForm = new ProductForm();
         // populate action properties
@@ -32,6 +32,7 @@ public class SaveProductController implements Controller {
         try {
             product.setPrice(Float.parseFloat(productForm.getPrice()));
         } catch (NumberFormatException e) {
+            System.out.println(e.getMessage());
         }
 
         // insert code to save Product
