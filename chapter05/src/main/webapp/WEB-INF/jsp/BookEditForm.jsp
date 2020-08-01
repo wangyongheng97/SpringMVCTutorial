@@ -9,6 +9,8 @@
 <body>
 
 <div id="global">
+<%--    <c:url var="formAction" value="/book_update"/>--%>
+<%--    <form:form commandName="book" action="${formAction}" method="post">--%>
 <form:form commandName="book" action="/book_update" method="post">
     <fieldset>
         <legend>Edit a book</legend>
